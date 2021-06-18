@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherCard from "../../components/WeatherCard/index";
+import { WeatherCard } from "../../components/index";
 
 import { HomeContainer, HomeWrapper } from "./HomeElements";
 
@@ -8,7 +8,6 @@ const Home = () => {
     <>
       <HomeContainer>
         <HomeWrapper>
-          <p>Home Component</p>
           <WeatherCard />
         </HomeWrapper>
       </HomeContainer>

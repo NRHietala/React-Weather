@@ -5,9 +5,12 @@ export const HomeContainer = styled.main`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 94vh;
   width: 100%;
   background: green;
 `;
 
-export const HomeWrapper = styled.div``;
+export const HomeWrapper = styled.div`
+  width: 70%;
+  background: red;
+`;
