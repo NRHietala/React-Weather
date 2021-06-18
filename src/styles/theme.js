@@ -1,4 +1,4 @@
 export const theme = {
-  primary: "red",
+  primary: "lightblue",
   secondary: "green",
 };
