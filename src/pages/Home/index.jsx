@@ -1,5 +1,5 @@
 import React from "react";
-import { WeatherCard, Search } from "../../components/index";
+import { Search, Gallery, WeatherCard } from "../../components/index";
 
 import { HomeContainer, HomeWrapper } from "./HomeElements";
 
@@ -9,7 +9,7 @@ const Home = () => {
       <HomeContainer>
         <HomeWrapper>
           <Search />
-          <p>test</p>
+          <Gallery />
           <WeatherCard />
         </HomeWrapper>
       </HomeContainer>

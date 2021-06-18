@@ -4,7 +4,7 @@ import { SearchContainer } from "./SearchElements";
 const Search = () => {
   return (
     <SearchContainer>
-      <p>test</p>
+      <p>Testing Search Component</p>
     </SearchContainer>
   );
 };
