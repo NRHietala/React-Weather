@@ -5,7 +5,7 @@ export const HomeContainer = styled.main`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 94vh;
+  height: 89vh;
   width: 100%;
   background: green;
 `;

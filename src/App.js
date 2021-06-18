@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { Home } from "./pages/index";
 import { StyleReset } from "./styles/index";
 import { Header } from "./components/index";
+import { Footer } from "./components/index";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 };
