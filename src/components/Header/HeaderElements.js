@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
   background: ${({ theme }) => theme.primary};
-  height: 6vh;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -12,13 +16,12 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderLogo = styled.span`
-  font-size: 3rem;
-  padding: 2vh 2vw;
+  font-size: 4rem;
+  padding: 0 5px;
 `;
 
 export const HeaderTitle = styled.h1`
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  font-size: 3rem;
+  font-size: 4rem;
+  padding: 0 5px;
+  white-space: nowrap;
 `;
