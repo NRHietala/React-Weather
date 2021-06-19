@@ -4,3 +4,37 @@ export const FooterContainer = styled.footer`
   background: gray;
   height: 5vh;
 `;
+
+export const FooterWrap = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  height: 100%;
+  padding: 0px 24px;
+  margin: 0 auto;
+`;
+
+export const Logo = styled.p`
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+`;
+
+export const WebRights = styled.small`
+  color: #fff;
+  font-size: 1.4rem;
+`;
+
+export const ContactIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ContactIconLink = styled.a`
+  color: #fff;
+  padding: 0px 5px;
+  font-size: 2.4rem;
+`;
