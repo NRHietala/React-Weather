@@ -10,6 +10,7 @@ import {
 const Search = () => {
   const handleSubmit = event => {
     event.preventDefault();
+    console.log("Search Click");
   };
 
   return (

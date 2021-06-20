@@ -24,6 +24,7 @@ export const SearchInput = styled.input`
   padding: 7px;
   border-radius: 15px;
   margin-right: 15px;
+  text-align: center;
 `;
 
 export const Btn = styled.button`
