@@ -7,6 +7,8 @@ const Gallery = () => {
     <GalleryContainer>
       <GalleryWrapper>
         <WeatherCard />
+        <WeatherCard />
+        <WeatherCard />
       </GalleryWrapper>
     </GalleryContainer>
   );
