@@ -6,7 +6,7 @@ export const GalleryContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: gray;
-  height: 75vh;
+  margin: 0 auto;
 `;
 
 export const GalleryWrapper = styled.div`

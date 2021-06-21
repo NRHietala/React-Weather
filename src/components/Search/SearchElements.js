@@ -5,7 +5,6 @@ export const SearchContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background: blue;
   height: 40px;
 `;
 

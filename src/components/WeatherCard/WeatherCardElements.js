@@ -7,6 +7,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   background: orange;
   height: 500px;
+  width: 400px;
   margin: 3vh 3vw;
 `;
 
