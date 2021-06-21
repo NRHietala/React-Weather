@@ -1,13 +1,32 @@
 import React from "react";
-import { CardContainer } from "./WeatherCardElements";
+import {
+  CardContainer,
+  CardWrapper,
+  ImageWrap,
+  Image,
+  TextContent,
+  Temperature,
+  Text,
+} from "./WeatherCardElements";
 
 const WeatherCard = () => {
+  const handleClick = () => {
+    console.log("Change temp measurement");
+  };
   return (
-    <>
-      <CardContainer>
-        <p>I'm a WeatherCard 🙂</p>
-      </CardContainer>
-    </>
+    <CardContainer>
+      <CardWrapper>
+        <ImageWrap>
+          <Image />
+        </ImageWrap>
+        <TextContent>
+          <Temperature onClick={handleClick}>98.6°</Temperature>
+          <Text>Partly Sunny</Text>
+          <Text>Feels like 98.6°</Text>
+          <Text>Humidity 100%</Text>
+        </TextContent>
+      </CardWrapper>
+    </CardContainer>
   );
 };
 
