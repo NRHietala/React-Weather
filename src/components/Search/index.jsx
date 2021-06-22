@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { getWeather } from "../../redux/weatherSlice";
+import { useDispatch } from "react-redux";
+
 import {
   SearchContainer,
   SearchWrapper,
@@ -8,9 +11,19 @@ import {
 } from "./SearchElements";
 
 const Search = () => {
+  const [value, setValue] = useState("");
+  const dispatch = useDispatch();
+
   const handleSubmit = event => {
     event.preventDefault();
-    console.log("Search Click");
+    if (value) {
+      dispatch(
+        getWeather({
+          city: value,
+        })
+      );
+    }
+    setValue("");
   };
 
   return (
@@ -19,10 +32,12 @@ const Search = () => {
         <SearchForm>
           <SearchInput
             name="search"
+            value={value}
             type="text"
             aria-label="searchbox"
             required={true}
             placeholder="Enter Zipcode..."
+            onChange={event => setValue(event.target.value)}
           />
           <Btn>Search</Btn>
         </SearchForm>
