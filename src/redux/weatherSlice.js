@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const getWeather = createAsyncThunk("weather/getWeather", async () => {
   // hard coded for now
   const response = await fetch(
-    `api.openweathermap.org/data/2.5/weather?q=esko&appid=27eb92efe57a74af17c4df6d41ffa08e&units=imperial`
+    `api.openweathermap.org/data/2.5/weather?q=esko&appid=${process.env.REACT_APP_API_KEY}&units=imperial`
   );
   if (response.ok) {
     const weather = await response.json();
