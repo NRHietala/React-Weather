@@ -8,7 +8,6 @@ export const getWeather = createAsyncThunk(
     );
     if (response.ok) {
       const weather = await response.json();
-      console.log(weather);
       return weather;
     }
   }
@@ -22,9 +21,9 @@ export const weatherSlice = createSlice({
     [getWeather.pending]: (state, action) => {
       console.log("fetching weather...");
     },
-    [getWeather.fulfulled]: (state, action) => {
-      console.log("fetch successful", action.payload.weather);
-      state.push(action.payload.weather);
+    [getWeather.fulfilled]: (state, action) => {
+      console.log("action payload", action.payload);
+      state.push(action.payload);
     },
   },
 });

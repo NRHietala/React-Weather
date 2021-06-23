@@ -9,7 +9,8 @@ import {
   Text,
 } from "./WeatherCardElements";
 
-const WeatherCard = () => {
+const WeatherCard = props => {
+  const { id } = props;
   const handleClick = () => {
     console.log("Change temp measurement");
   };
@@ -21,7 +22,7 @@ const WeatherCard = () => {
         </ImageWrap>
         <TextContent>
           <Temperature onClick={handleClick}>98.6°</Temperature>
-          <Text>Partly Sunny</Text>
+          <Text>{id}</Text>
           <Text>Feels like 98.6°</Text>
           <Text>Humidity 100%</Text>
         </TextContent>
