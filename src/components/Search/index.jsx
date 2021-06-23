@@ -17,11 +17,7 @@ const Search = () => {
   const handleSubmit = event => {
     event.preventDefault();
     if (value) {
-      dispatch(
-        getWeather({
-          city: value,
-        })
-      );
+      dispatch(getWeather(value));
     }
     setValue("");
   };
