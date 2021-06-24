@@ -10,7 +10,20 @@ const Gallery = () => {
     <GalleryContainer>
       <GalleryWrapper>
         {weather.map(weather => (
-          <WeatherCard key={weather.id} id={weather.id} />
+          <WeatherCard
+            key={weather.id}
+            sunrise={weather.sys.sunrise}
+            sunset={weather.sys.sunset}
+            cityName={weather.name}
+            dateTime={weather.dt}
+            weatherIcon={weather.weather[0].icon}
+            minTemp={weather.main.temp_min}
+            maxTemp={weather.main.temp_max}
+            temp={weather.main.temp}
+            description={weather.weather.description}
+            realFeel={weather.main.feels_like}
+            humidity={weather.main.humidity}
+          />
         ))}
       </GalleryWrapper>
     </GalleryContainer>
