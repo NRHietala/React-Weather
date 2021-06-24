@@ -10,21 +10,42 @@ import {
 } from "./WeatherCardElements";
 
 const WeatherCard = props => {
-  const { id } = props;
-  const handleClick = () => {
-    console.log("Change temp measurement");
-  };
+  const {
+    id,
+    sunrise,
+    sunset,
+    cityName,
+    dateTime,
+    weatherIcon,
+    minTemp,
+    maxTemp,
+    temp,
+    description,
+    realFeel,
+    humidity,
+  } = props;
+
   return (
     <CardContainer>
       <CardWrapper>
-        <ImageWrap>
-          <Image />
-        </ImageWrap>
         <TextContent>
-          <Temperature onClick={handleClick}>98.6°</Temperature>
-          <Text>{id}</Text>
-          <Text>Feels like 98.6°</Text>
-          <Text>Humidity 100%</Text>
+          <Temperature>98.6°</Temperature>
+          <Text>id{id}</Text>
+          <Text>sunrise{sunrise}</Text>
+          <Text>sunset{sunset}</Text>
+          <Text>cityName{cityName}</Text>
+          <Text>dateTime{dateTime}</Text>
+          <ImageWrap>
+            <Image
+              src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
+            />
+          </ImageWrap>
+          <Text>minTemp{minTemp}</Text>
+          <Text>maxTemp{maxTemp}</Text>
+          <Text>temp{temp}</Text>
+          <Text>description{description}</Text>
+          <Text>realFeel{realFeel}</Text>
+          <Text>humidity{humidity}</Text>
         </TextContent>
       </CardWrapper>
     </CardContainer>

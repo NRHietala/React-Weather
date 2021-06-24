@@ -9,6 +9,8 @@ export const getWeather = createAsyncThunk(
     if (response.ok) {
       const weather = await response.json();
       return weather;
+    } else {
+      alert("Please enter a valid city name");
     }
   }
 );
