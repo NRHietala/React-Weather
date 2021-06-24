@@ -28,9 +28,6 @@ const WeatherCard = props => {
   return (
     <CardContainer>
       <CardWrapper>
-        <ImageWrap>
-          <Image />
-        </ImageWrap>
         <TextContent>
           <Temperature>98.6°</Temperature>
           <Text>id{id}</Text>
@@ -38,7 +35,11 @@ const WeatherCard = props => {
           <Text>sunset{sunset}</Text>
           <Text>cityName{cityName}</Text>
           <Text>dateTime{dateTime}</Text>
-          <Image src={`http://openweathermap.org/img/wn/${weatherIcon}.png`} />
+          <ImageWrap>
+            <Image
+              src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
+            />
+          </ImageWrap>
           <Text>minTemp{minTemp}</Text>
           <Text>maxTemp{maxTemp}</Text>
           <Text>temp{temp}</Text>
