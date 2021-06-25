@@ -6,6 +6,10 @@ import { GalleryContainer, GalleryWrapper } from "./GalleryElements";
 const Gallery = () => {
   const weather = useSelector(state => state.weather);
 
+  /////////////////////////////////////
+  // Need local storage persistance
+  /////////////////////////////////////
+
   return (
     <GalleryContainer>
       <GalleryWrapper>
