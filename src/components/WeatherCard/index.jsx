@@ -26,6 +26,10 @@ const WeatherCard = props => {
     humidity,
   } = props;
 
+  const dateTimeConversion = dateTime => {
+    return new Date(dateTime * 1000).toLocaleDateString("en-US");
+  };
+
   return (
     <CardContainer>
       <CardWrapper>
@@ -37,7 +41,7 @@ const WeatherCard = props => {
         </SunRiseSet>
         <MainWeather>
           <DisplayInfo>{cityName}</DisplayInfo>
-          <DisplayInfo>{dateTime}</DisplayInfo>
+          <DisplayInfo>{dateTimeConversion(dateTime)}</DisplayInfo>
           <ImageWrap>
             <Image
               src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
