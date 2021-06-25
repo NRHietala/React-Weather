@@ -2,16 +2,17 @@ import React from "react";
 import {
   CardContainer,
   CardWrapper,
+  SunRiseSet,
+  DisplayInfo,
+  MainWeather,
   ImageWrap,
   Image,
-  TextContent,
-  Temperature,
-  Text,
+  TempRange,
+  AuxWeather,
 } from "./WeatherCardElements";
 
 const WeatherCard = props => {
   const {
-    id,
     sunrise,
     sunset,
     cityName,
@@ -28,25 +29,31 @@ const WeatherCard = props => {
   return (
     <CardContainer>
       <CardWrapper>
-        <TextContent>
-          <Temperature>98.6°</Temperature>
-          <Text>id{id}</Text>
-          <Text>sunrise{sunrise}</Text>
-          <Text>sunset{sunset}</Text>
-          <Text>cityName{cityName}</Text>
-          <Text>dateTime{dateTime}</Text>
+        <SunRiseSet>
+          <DisplayInfo fontSize="2rem" color="red">
+            sunrise{sunrise}
+          </DisplayInfo>
+          <DisplayInfo fontSize="2rem">sunset{sunset}</DisplayInfo>
+        </SunRiseSet>
+        <MainWeather>
+          <DisplayInfo>{cityName}</DisplayInfo>
+          <DisplayInfo>{dateTime}</DisplayInfo>
           <ImageWrap>
             <Image
               src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
             />
           </ImageWrap>
-          <Text>minTemp{minTemp}</Text>
-          <Text>maxTemp{maxTemp}</Text>
-          <Text>temp{temp}</Text>
-          <Text>description{description}</Text>
-          <Text>realFeel{realFeel}</Text>
-          <Text>humidity{humidity}</Text>
-        </TextContent>
+          <DisplayInfo>desc{description}</DisplayInfo>
+        </MainWeather>
+        <TempRange>
+          <DisplayInfo>min{minTemp}</DisplayInfo>
+          <DisplayInfo>current{temp}</DisplayInfo>
+          <DisplayInfo>max{maxTemp}</DisplayInfo>
+        </TempRange>
+        <AuxWeather>
+          <DisplayInfo>real feel{realFeel}</DisplayInfo>
+          <DisplayInfo>humidity{humidity}</DisplayInfo>
+        </AuxWeather>
       </CardWrapper>
     </CardContainer>
   );

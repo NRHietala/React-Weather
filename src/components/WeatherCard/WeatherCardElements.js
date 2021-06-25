@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
   background: orange;
-  height: 500px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   margin: 3vh 3vw;
 `;
 
@@ -16,31 +12,44 @@ export const CardWrapper = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   height: 100%;
-  padding: 10px;
+  width: 100%;
+`;
+
+export const SunRiseSet = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+`;
+
+export const DisplayInfo = styled.p`
+  color: ${props => props.color};
+  font-size: ${props => props.fontSize};
+  padding: ${props => props.padding};
+`;
+
+export const MainWeather = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ImageWrap = styled.div`
-  padding: 50px;
+  padding: 20px;
 `;
 
 export const Image = styled.img``;
 
-export const TextContent = styled.div`
+export const TempRange = styled.div`
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
 `;
 
-export const Temperature = styled.h3`
-  font-size: 4rem;
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-export const Text = styled.p`
-  padding: 7px;
-  font-size: 2.5rem;
+export const AuxWeather = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 `;

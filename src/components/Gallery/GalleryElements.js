@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const GalleryContainer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   background: gray;
+  height: 50%;
+  width: 50%;
   margin: 0 auto;
 `;
 
@@ -15,4 +13,5 @@ export const GalleryWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 `;
