@@ -39,30 +39,32 @@ const WeatherCard = props => {
       <CardWrapper>
         <SunRiseSet>
           <DisplayInfo fontSize="2rem" color="red">
-            sunrise{timeConversion(sunrise)}
+            sunrise {timeConversion(sunrise)}
           </DisplayInfo>
           <DisplayInfo fontSize="2rem">
-            sunset{timeConversion(sunset)}
+            sunset {timeConversion(sunset)}
           </DisplayInfo>
         </SunRiseSet>
         <MainWeather>
-          <DisplayInfo>{cityName}</DisplayInfo>
-          <DisplayInfo>{dateTimeConversion(dateTime)}</DisplayInfo>
+          <DisplayInfo fontSize="3rem">{cityName}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            {dateTimeConversion(dateTime)}
+          </DisplayInfo>
           <ImageWrap>
             <Image
               src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
             />
           </ImageWrap>
-          <DisplayInfo>desc{description}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">desc {description}</DisplayInfo>
         </MainWeather>
         <TempRange>
-          <DisplayInfo>min{minTemp}</DisplayInfo>
-          <DisplayInfo>current{temp}</DisplayInfo>
-          <DisplayInfo>max{maxTemp}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">min {minTemp}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">current {temp}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">max {maxTemp}</DisplayInfo>
         </TempRange>
         <AuxWeather>
-          <DisplayInfo>real feel{realFeel}</DisplayInfo>
-          <DisplayInfo>humidity{humidity}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">real feel {realFeel}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">humidity {humidity}</DisplayInfo>
         </AuxWeather>
       </CardWrapper>
     </CardContainer>
