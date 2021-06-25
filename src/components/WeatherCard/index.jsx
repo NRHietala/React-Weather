@@ -30,14 +30,20 @@ const WeatherCard = props => {
     return new Date(dateTime * 1000).toLocaleDateString("en-US");
   };
 
+  const timeConversion = time => {
+    return new Date(time * 1000).toLocaleTimeString("en-US");
+  };
+
   return (
     <CardContainer>
       <CardWrapper>
         <SunRiseSet>
           <DisplayInfo fontSize="2rem" color="red">
-            sunrise{sunrise}
+            sunrise{timeConversion(sunrise)}
           </DisplayInfo>
-          <DisplayInfo fontSize="2rem">sunset{sunset}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            sunset{timeConversion(sunset)}
+          </DisplayInfo>
         </SunRiseSet>
         <MainWeather>
           <DisplayInfo>{cityName}</DisplayInfo>
