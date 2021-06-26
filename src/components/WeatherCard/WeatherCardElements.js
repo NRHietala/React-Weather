@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  background: lightblue;
+  background: rgb(93, 129, 172);
+  background: radial-gradient(
+    circle,
+    rgba(93, 129, 172, 1) 27%,
+    rgba(45, 67, 253, 1) 100%
+  );
   height: 100%;
   width: 100%;
   max-height: 550px;
@@ -17,6 +22,7 @@ export const CardWrapper = styled.div`
   height: 100%;
   width: 100%;
   padding: 5%;
+  color: white;
 `;
 
 export const SunRiseSet = styled.div`

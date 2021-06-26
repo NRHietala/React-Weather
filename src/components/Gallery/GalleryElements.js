@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const GalleryContainer = styled.div`
-  background: gray;
   height: 100%;
   width: 100%;
   margin: 0 auto;
