@@ -24,7 +24,7 @@ const Gallery = () => {
             minTemp={weather.main.temp_min}
             maxTemp={weather.main.temp_max}
             temp={weather.main.temp}
-            description={weather.weather.description}
+            description={weather.weather[0].description}
             realFeel={weather.main.feels_like}
             humidity={weather.main.humidity}
           />

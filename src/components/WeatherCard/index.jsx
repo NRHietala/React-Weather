@@ -4,6 +4,7 @@ import {
   CardWrapper,
   SunRiseSet,
   DisplayInfo,
+  Label,
   MainWeather,
   ImageWrap,
   Image,
@@ -38,33 +39,54 @@ const WeatherCard = props => {
     <CardContainer>
       <CardWrapper>
         <SunRiseSet>
-          <DisplayInfo fontSize="2rem" color="red">
-            sunrise {timeConversion(sunrise)}
+          <DisplayInfo fontSize="2rem">
+            <Label fontSize="2rem" padding="1%">
+              🌞 Sunrise
+            </Label>
+            {timeConversion(sunrise)}
           </DisplayInfo>
           <DisplayInfo fontSize="2rem">
-            sunset {timeConversion(sunset)}
+            <Label fontSize="2rem" padding="1%">
+              Sunset 🌜
+            </Label>
+            {timeConversion(sunset)}
           </DisplayInfo>
         </SunRiseSet>
         <MainWeather>
-          <DisplayInfo fontSize="3rem">{cityName}</DisplayInfo>
-          <DisplayInfo fontSize="2rem">
+          <DisplayInfo fontSize="4rem">{cityName}</DisplayInfo>
+          <DisplayInfo fontSize="1.7rem">
             {dateTimeConversion(dateTime)}
           </DisplayInfo>
           <ImageWrap>
             <Image
               src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
+              height="60px"
+              width="60px"
             />
           </ImageWrap>
-          <DisplayInfo fontSize="2rem">desc {description}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            <Label fontSize="2.4rem">{description}</Label>
+          </DisplayInfo>
         </MainWeather>
         <TempRange>
-          <DisplayInfo fontSize="2rem">min {minTemp}</DisplayInfo>
-          <DisplayInfo fontSize="2rem">current {temp}</DisplayInfo>
-          <DisplayInfo fontSize="2rem">max {maxTemp}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            <Label>Low</Label>
+            {minTemp}°F
+          </DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            <Label>Current Temp</Label> {temp}°F
+          </DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            <Label>High</Label> {maxTemp}°F
+          </DisplayInfo>
         </TempRange>
         <AuxWeather>
-          <DisplayInfo fontSize="2rem">real feel {realFeel}</DisplayInfo>
-          <DisplayInfo fontSize="2rem">humidity {humidity}</DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            <Label>Real Feel</Label> {realFeel}°F
+          </DisplayInfo>
+          <DisplayInfo fontSize="2rem">
+            <Label>Humidity</Label> {humidity}%
+          </DisplayInfo>
         </AuxWeather>
       </CardWrapper>
     </CardContainer>

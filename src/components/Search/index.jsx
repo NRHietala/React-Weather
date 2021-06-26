@@ -32,7 +32,7 @@ const Search = () => {
             type="text"
             aria-label="searchbox"
             required={true}
-            placeholder="Enter Zipcode..."
+            placeholder="Enter City..."
             onChange={event => setValue(event.target.value)}
           />
           <Btn>Search</Btn>
