@@ -40,21 +40,21 @@ const WeatherCard = props => {
       <CardWrapper>
         <SunRiseSet>
           <DisplayInfo fontSize="2rem">
-            <Label fontSize="2rem" color="red">
+            <Label fontSize="2rem" color="red" padding="1%">
               🌞 Sunrise
             </Label>
             {timeConversion(sunrise)}
           </DisplayInfo>
           <DisplayInfo fontSize="2rem">
-            <Label fontSize="2rem" color="red">
+            <Label fontSize="2rem" color="red" padding="1%">
               Sunset 🌜
             </Label>
             {timeConversion(sunset)}
           </DisplayInfo>
         </SunRiseSet>
         <MainWeather>
-          <DisplayInfo fontSize="3rem">{cityName}</DisplayInfo>
-          <DisplayInfo fontSize="1.5rem">
+          <DisplayInfo fontSize="4rem">{cityName}</DisplayInfo>
+          <DisplayInfo fontSize="1.7rem">
             {dateTimeConversion(dateTime)}
           </DisplayInfo>
           <ImageWrap>
@@ -65,7 +65,7 @@ const WeatherCard = props => {
             />
           </ImageWrap>
           <DisplayInfo fontSize="2rem">
-            <Label>{description}</Label>
+            <Label fontSize="2.4rem">{description}</Label>
           </DisplayInfo>
         </MainWeather>
         <TempRange>

@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  background: orange;
+  background: lightblue;
   height: 100%;
   width: 100%;
+  max-height: 550px;
+  max-width: 630px;
   margin: 3vh 3vw;
+  border-radius: 50px;
 `;
 
 export const CardWrapper = styled.div`
@@ -13,6 +16,7 @@ export const CardWrapper = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
+  padding: 5%;
 `;
 
 export const SunRiseSet = styled.div`
@@ -20,6 +24,7 @@ export const SunRiseSet = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 8%;
 `;
 
 export const DisplayInfo = styled.p`
@@ -27,6 +32,7 @@ export const DisplayInfo = styled.p`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding: 1%;
   color: ${props => props.color};
   font-size: ${props => props.fontSize};
   padding: ${props => props.padding};
@@ -46,7 +52,7 @@ export const MainWeather = styled.div`
 `;
 
 export const ImageWrap = styled.div`
-  padding: 10px;
+  padding: 3%;
 `;
 
 export const Image = styled.img`
@@ -60,6 +66,7 @@ export const TempRange = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 7% 0%;
 `;
 
 export const AuxWeather = styled.div`

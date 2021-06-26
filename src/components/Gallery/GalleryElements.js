@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const GalleryContainer = styled.div`
   background: gray;
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
 `;
 
