@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  background: rgb(93, 129, 172);
+  background: rgb(101, 140, 187);
   background: radial-gradient(
     circle,
-    rgba(93, 129, 172, 1) 27%,
-    rgba(45, 67, 253, 1) 100%
+    rgba(101, 140, 187, 0.9780127245508982) 0%,
+    rgba(27, 73, 88, 1) 79%
   );
   height: 100%;
   width: 100%;

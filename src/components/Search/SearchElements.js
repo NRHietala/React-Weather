@@ -30,7 +30,7 @@ export const Btn = styled.button`
   border: none;
   padding: 7px;
   border-radius: 15px;
-  background: lightblue;
+  background-color: ${props => props.theme.primary};
 
   &:hover {
     cursor: pointer;

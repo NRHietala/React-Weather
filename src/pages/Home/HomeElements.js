@@ -4,7 +4,7 @@ export const HomeContainer = styled.main`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly; // temporary spaces components
-  min-height: 89vh;
+  min-height: 88.8vh;
   width: 100%;
-  background: green;
+  background: ${props => props.theme.bgColor};
 `;

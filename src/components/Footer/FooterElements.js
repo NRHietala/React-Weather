@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  background: gray;
+  background: ${props => props.theme.primary};
   height: 5vh;
 `;
 
@@ -17,13 +17,14 @@ export const FooterWrap = styled.div`
 `;
 
 export const Logo = styled.p`
+  color: ${props => props.theme.secondary};
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 2px;
 `;
 
 export const WebRights = styled.small`
-  color: #fff;
+  color: ${props => props.theme.secondary};
   font-size: 1.4rem;
 `;
 
@@ -34,7 +35,7 @@ export const ContactIcons = styled.div`
 `;
 
 export const ContactIconLink = styled.a`
-  color: #fff;
+  color: ${props => props.theme.secondary};
   padding: 0px 5px;
   font-size: 2.4rem;
 `;

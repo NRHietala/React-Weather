@@ -1,4 +1,5 @@
 export const theme = {
-  primary: "lightblue",
-  secondary: "green",
+  primary: "#1b4958",
+  secondary: "#e8e6e3",
+  bgColor: "#222628",
 };
