@@ -33,6 +33,7 @@ const Search = () => {
             aria-label="searchbox"
             required={true}
             placeholder="Enter City..."
+            autoComplete="off"
             onChange={event => setValue(event.target.value)}
           />
           <Btn>Search</Btn>

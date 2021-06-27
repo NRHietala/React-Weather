@@ -16,11 +16,13 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderLogo = styled.span`
+  color: ${props => props.theme.secondary};
   font-size: 4rem;
   padding: 0 5px;
 `;
 
 export const HeaderTitle = styled.h1`
+  color: ${props => props.theme.secondary};
   font-size: 4rem;
   padding: 0 5px;
   white-space: nowrap;
