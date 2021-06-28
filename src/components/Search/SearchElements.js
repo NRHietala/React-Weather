@@ -6,6 +6,7 @@ export const SearchContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 40px;
+  margin: 10px 0px;
 `;
 
 export const SearchWrapper = styled.div`
@@ -31,9 +32,9 @@ export const Btn = styled.button`
   padding: 7px;
   border-radius: 15px;
   background-color: ${props => props.theme.primary};
+  color: ${props => props.theme.secondary};
 
   &:hover {
     cursor: pointer;
-    color: #fff;
   }
 `;

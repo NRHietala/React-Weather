@@ -18,16 +18,21 @@ export const getWeather = createAsyncThunk(
 export const weatherSlice = createSlice({
   name: "weather",
   initialState: [],
-  reducers: {},
+  reducers: {
+    deleteWeather: (state, action) => {
+      return state.filter(todo => todo.id !== action.payload.id);
+    },
+  },
   extraReducers: {
     [getWeather.pending]: (state, action) => {
       console.log("fetching weather...");
     },
     [getWeather.fulfilled]: (state, action) => {
-      console.log("action payload", action.payload);
       state.push(action.payload);
     },
   },
 });
+
+export const { deleteWeather } = weatherSlice.actions;
 
 export default weatherSlice.reducer;
