@@ -12,6 +12,8 @@ import {
   Image,
   TempRange,
   AuxWeather,
+  ControlPanel,
+  Btn,
 } from "./WeatherCardElements";
 
 const WeatherCard = props => {
@@ -42,23 +44,19 @@ const WeatherCard = props => {
 
   const handleDelete = () => {
     dispatch(deleteWeather({ id: id }));
-    console.log("weather deleted");
   };
 
   return (
     <CardContainer>
       <CardWrapper>
         <SunRiseSet>
-          <DisplayInfo fontSize="2rem">
+          <DisplayInfo fontSize="1.5rem">
             <Label fontSize="2rem" padding="1%">
               🌞 Sunrise
             </Label>
             {timeConversion(sunrise)}
           </DisplayInfo>
-          <DisplayInfo fontSize="1.5rem" onClick={handleDelete}>
-            X
-          </DisplayInfo>
-          <DisplayInfo fontSize="2rem">
+          <DisplayInfo fontSize="1.5rem">
             <Label fontSize="2rem" padding="1%">
               Sunset 🌜
             </Label>
@@ -82,25 +80,28 @@ const WeatherCard = props => {
           </DisplayInfo>
         </MainWeather>
         <TempRange>
-          <DisplayInfo fontSize="2rem">
-            <Label>Low</Label>
-            {minTemp}°F
+          <DisplayInfo fontSize="1.5rem">
+            <Label fontSize="2rem">Low</Label>
+            {minTemp} °F
           </DisplayInfo>
-          <DisplayInfo fontSize="2rem">
-            <Label>Current Temp</Label> {temp}°F
-          </DisplayInfo>
-          <DisplayInfo fontSize="2rem">
-            <Label>High</Label> {maxTemp}°F
+          <DisplayInfo fontSize="3rem">{temp} °F</DisplayInfo>
+          <DisplayInfo fontSize="1.5rem">
+            <Label fontSize="2rem">High</Label> {maxTemp} °F
           </DisplayInfo>
         </TempRange>
         <AuxWeather>
-          <DisplayInfo fontSize="2rem">
-            <Label>Real Feel</Label> {realFeel}°F
+          <DisplayInfo fontSize="1.5rem">
+            <Label fontSize="2rem">Real Feel</Label> {realFeel} °F
           </DisplayInfo>
-          <DisplayInfo fontSize="2rem">
-            <Label>Humidity</Label> {humidity}%
+          <DisplayInfo fontSize="1.5rem">
+            <Label fontSize="2rem">Humidity</Label> {humidity} %
           </DisplayInfo>
         </AuxWeather>
+        <ControlPanel>
+          {/* <Btn>Convert to Celcius</Btn> */}
+          <Btn onClick={handleDelete}>Delete Card</Btn>
+          {/* <Btn>Forecast</Btn> */}
+        </ControlPanel>
       </CardWrapper>
     </CardContainer>
   );

@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
   height: 100%;
   width: 100%;
   max-height: 550px;
-  max-width: 630px;
+  max-width: 550px;
   margin: 3vh 3vw;
   border-radius: 50px;
 `;
@@ -39,6 +39,7 @@ export const DisplayInfo = styled.p`
   justify-content: center;
   align-items: center;
   padding: 1%;
+  white-space: nowrap;
   color: ${props => props.color};
   font-size: ${props => props.fontSize};
   padding: ${props => props.padding};
@@ -72,7 +73,7 @@ export const TempRange = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 7% 0%;
+  padding: 5% 0%;
 `;
 
 export const AuxWeather = styled.div`
@@ -80,4 +81,22 @@ export const AuxWeather = styled.div`
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
+  padding: 5% 0%;
+`;
+
+export const ControlPanel = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Btn = styled.button`
+  background: ${props => props.theme.danger};
+  border-radius: 50px;
+  padding: 1% 2%;
+
+  &:hover {
+    border: 2px solid #fff;
+  }
 `;

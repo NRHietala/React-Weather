@@ -28,7 +28,6 @@ export const weatherSlice = createSlice({
       console.log("fetching weather...");
     },
     [getWeather.fulfilled]: (state, action) => {
-      console.log("action payload", action.payload);
       state.push(action.payload);
     },
   },
