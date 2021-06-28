@@ -13,6 +13,7 @@ const Gallery = () => {
           weather.map(weather => (
             <WeatherCard
               key={weather.id}
+              id={weather.id}
               sunrise={weather.sys.sunrise}
               sunset={weather.sys.sunset}
               cityName={weather.name}

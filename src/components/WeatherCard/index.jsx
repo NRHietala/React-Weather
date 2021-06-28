@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteWeather } from "../../redux/weatherSlice";
 import {
   CardContainer,
   CardWrapper,
@@ -14,6 +16,7 @@ import {
 
 const WeatherCard = props => {
   const {
+    id,
     sunrise,
     sunset,
     cityName,
@@ -27,12 +30,19 @@ const WeatherCard = props => {
     humidity,
   } = props;
 
+  const dispatch = useDispatch();
+
   const dateTimeConversion = dateTime => {
     return new Date(dateTime * 1000).toLocaleDateString("en-US");
   };
 
   const timeConversion = time => {
     return new Date(time * 1000).toLocaleTimeString("en-US");
+  };
+
+  const handleDelete = () => {
+    dispatch(deleteWeather({ id: id }));
+    console.log("weather deleted");
   };
 
   return (
@@ -44,6 +54,9 @@ const WeatherCard = props => {
               🌞 Sunrise
             </Label>
             {timeConversion(sunrise)}
+          </DisplayInfo>
+          <DisplayInfo fontSize="1.5rem" onClick={handleDelete}>
+            X
           </DisplayInfo>
           <DisplayInfo fontSize="2rem">
             <Label fontSize="2rem" padding="1%">
