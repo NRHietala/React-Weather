@@ -97,6 +97,6 @@ export const Btn = styled.button`
   padding: 1% 2%;
 
   &:hover {
-    border: 2px solid #fff;
+    border: 2px solid ${props => props.theme.seconday};
   }
 `;
