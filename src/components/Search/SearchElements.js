@@ -36,5 +36,6 @@ export const Btn = styled.button`
 
   &:hover {
     cursor: pointer;
+    border: 2px solid ${props => props.theme.seconday};
   }
 `;
